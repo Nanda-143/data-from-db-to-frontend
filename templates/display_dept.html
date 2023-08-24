@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_dept</title>
+</head>
+<body>
+    <center>
+        <h1>dept info</h1>
+        <table border="2px" width="300px">
+            <tr>
+                <th>deptno</th>
+                <th>dname</th>
+                <th>dloc</th>
+            </tr>
+            {% for do in qsdo %}
+            <tr>
+                <td>
+                    {{ do.deptno }}
+                </td>
+                <td>
+                    {{ do.dname }}
+                </td>
+                <td>
+                    {{ do.dloc }}
+                </td>  
+            </tr>
+            {% endfor %}
+        </table>
+        <h1>details of employs</h1>
+        <table border="2px" width="300px">
+            <tr>
+                <th>deptno</th>
+                <th>ename</th>
+                <th>sal</th>
+                <th>job</th>
+                <th>comm</th>
+            </tr>
+            {% for do in qseo %}
+            <tr>
+                <td>
+                    {{ do.deptno }}
+                </td>
+                <td>
+                    {{ do.ename }}
+                </td>
+                <td>
+                    {{ do.sal }}
+                </td>
+                <td>
+                    {{ do.job }}
+                </td> 
+                <td>
+                    {{ do.comm }}
+                </td>    
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
